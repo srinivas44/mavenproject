@@ -24,7 +24,7 @@ pipeline {
         }
 		stage ('Copy Artifact to Nexus Job'){
             steps {
-                sh 'cp /var/lib/jenkins/workspace/Vprofile-pipeline/target/vprofile-v3.war /var/lib/jenkins/workspace/Vprofile-Nexus-Versioning/vprofile-v3.war'
+                sh 'cp /var/lib/jenkins/workspace/Vprofile-pipeline/target/WebProject-v21.0.war /var/lib/jenkins/workspace/Vprofile-Nexus-Versioning/WebProject-v21.0.war'
             }
             post {
                 success {
@@ -34,7 +34,7 @@ pipeline {
         }
         stage ('Nexus Versioning'){
             steps {
-                build job: 'Vprofile-Nexus-Versioning'
+                build job: 'Vprofile-ToNexus-Versioning'
             }
         }
 		
