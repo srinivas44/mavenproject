@@ -1,7 +1,7 @@
 package net.systemshub;
 
 public class User {
-public String name,password,email;
+public String name,password,email
 
 public User(){}
 public void setname (String name){
