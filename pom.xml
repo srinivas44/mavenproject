@@ -43,12 +43,12 @@
 
 <distributionManagement>
      <repository>
-         <id>deployment</id>
+         <id>WebProject_Repo</id>
          <name>Internal Releases</name>
          <url>http://192.168.226.150:8081/nexus/content/repositories/WebProject_Repo/</url>
      </repository>
      <snapshotRepository>
-         <id>deployment</id>
+         <id>WebProject_Repo</id>
          <name>Internal Snapshot Releases</name>
          <url>http://192.168.226.150:8081/nexus/content/repositories/WebProject_Repo/</url>
      </snapshotRepository>
