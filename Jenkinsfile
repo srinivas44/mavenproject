@@ -1,15 +1,9 @@
-pipeline {
-  agent any
-  tools {
-       maven 'Maven 3.5'
+node {
+    stage('SCM Checkout'){
+	git ''
       }
-  stages {
-    stage ('Build') {
-          steps{
-                sh script: 'mvn clean package'
-                }
-          }
-        }
-   
-   }
 
+    stage('Compile-Package'){
+     sh 'mvn package'
+     }
+}
