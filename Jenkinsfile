@@ -1,5 +1,14 @@
-node {
-    stage('Compile-Package'){
-     sh 'mvn package'
-     }
-}
+pipeline {
+  agent any
+  tools {
+       maven 'Maven 3.5'
+      }
+  stages {
+    stage ('Build') {
+          steps{
+                sh script: 'mvn clean package'
+                }
+          }
+        }
+   
+   }
