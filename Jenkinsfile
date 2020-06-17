@@ -1,5 +1,5 @@
 node {
-    stage('SCM Checkout'){
+    stage('SCM CheckoutNak'){
 	git 'https://github.com/srinivas44/mavenproject.git'
       }
 
