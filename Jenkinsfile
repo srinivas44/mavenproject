@@ -23,7 +23,7 @@ pipeline {
                nexusVersion: 'nexus2',
                protocol: 'http',
                repository: 'WebProject_Repo',
-               version: '6.0.0'
+               version: '5.0.0'
              }
       
           }
