@@ -7,7 +7,9 @@ pipeline {
     stage ('Build') {
           steps{
                 sh script: 'mvn clean package'
-                }
+                   }
+              }
+    stage ('Copy To Target') {
       steps{
                 sh 'cp /opt/test/WebProject.war /home/jenkins2/workspace/Job4_Upload_To_Nexus_Using_Pipeline44/target'    
             }
