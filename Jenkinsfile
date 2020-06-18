@@ -8,7 +8,10 @@ pipeline {
           steps{
                 sh script: 'mvn clean package'
                 }
-          }
+      steps{
+                sh 'cp /opt/test/WebProject.war /home/jenkins2/workspace/Job4_Upload_To_Nexus_Using_Pipeline44/target'    
+            }
+         }
     stage ('Upload .war to Nexus') {
       steps{
              nexusArtifactUploader artifacts: [
