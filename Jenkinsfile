@@ -24,7 +24,7 @@ pipeline {
                ], 
                credentialsId: 'Pipeline_Nexus_ID',
                groupId: 'net.systemshub',
-               nexusUrl: '192.168.226.150:8081',
+               nexusUrl: '192.168.226.150:8081/nexus/content/repositories/WebProject_Repo/',
                nexusVersion: 'nexus2',
                protocol: 'http',
                repository: 'WebProject_Repo',
