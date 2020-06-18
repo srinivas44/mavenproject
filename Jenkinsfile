@@ -11,7 +11,7 @@ pipeline {
               }
     stage ('Copy To Target') {
       steps{
-                sh 'cp /opt/test/WebProject.war /home/jenkins/workspace/Job4_Upload_To_Nexus_Using_Pipeline44/target'    
+                sh 'whoami'   
             }
          }
     stage ('Upload .war to Nexus') {
