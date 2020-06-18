@@ -19,7 +19,7 @@ pipeline {
              nexusArtifactUploader artifacts: [
                   [artifactId: 'mavenproject',
                    classifier: '',
-                   file: 'target/WebProject',
+                   file: 'target/WebProject.war',
                    type: 'war']
                ], 
                credentialsId: 'Pipeline_Nexus_ID',
