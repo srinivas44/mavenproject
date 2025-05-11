@@ -1,0 +1,26 @@
+@Library('my-shared-lib') _  // Link to the shared library
+
+import org.example.Utils  // Import class from /src
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Greeting') {
+            steps {
+                script {
+                    sayHello('Terraform User')  // from vars/sayHello.groovy
+                }
+            }
+        }
+
+        stage('Shout Something') {
+            steps {
+                script {
+                    def utils = new Utils(this)
+                    utils.shout('hello from shared lib')
+                }
+            }
+        }
+    }
+}
