@@ -4,21 +4,8 @@ branches:
   main:
     regex: ^main$
     increment: Patch
-    track-merge-target: false
-    is-release-branch: true
     label: ''
-
-  develop:
-    regex: ^develop$
-    increment: Minor
-    label: beta
-    source-branches: ['main']
-
-  feature:
-    regex: ^(feature|child)[/-]
-    increment: Minor
-    label: alpha
-    source-branches: ['develop', 'main']
+    is-release-branch: true
 
 ignore:
   sha: []
