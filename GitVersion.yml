@@ -7,18 +7,18 @@ branches:
     prevent-increment-of-merged-branch-version: true
     track-merge-target: false
     is-release-branch: true
-    tag: ''
+    label: ''
 
   develop:
     regex: ^develop$
     increment: Minor
-    tag: beta
+    label: beta
     source-branches: ['main']
 
   feature:
     regex: ^(feature|child)[/-]
     increment: Minor
-    tag: alpha
+    label: alpha
     source-branches: ['develop', 'main']
 
 ignore:
