@@ -1,1 +1,2 @@
 Testing Gitversion concept ... verify hhh uygvyuv
+This line added to test Web Hook concept for Auto trigger
