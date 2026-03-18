@@ -32,7 +32,6 @@
         <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
           <failOnMissingWebXml>false</failOnMissingWebXml>
-          <outputDirectory>/opt/test</outputDirectory>
         </configuration>
       </plugin>
    
