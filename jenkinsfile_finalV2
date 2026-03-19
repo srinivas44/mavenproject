@@ -1,0 +1,28 @@
+pipeline {
+  agent any
+  environment {
+        NAME = 'MARLIN'
+        LASTNAME = 'SOFT'
+                }
+
+  tools {
+       maven 'Maven 3.9'
+      }
+  stages {
+    stage ('Build') {
+          steps{
+                sh 'echo $NAME $LASTNAME'
+                sh script: 'mvn clean package'
+                }
+          }
+    stage('Test') {
+          steps {
+                  sh 'echo "Accessed global vars in stage2 as well ... "'
+                  sh 'echo $NAME $LASTNAME'
+                }
+
+           }
+
+        }
+   }
+ 
