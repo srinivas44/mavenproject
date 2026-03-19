@@ -3,8 +3,8 @@ pipeline {
   environment {
         NAME = 'MARLIN'
         LASTNAME = 'SOFT'
-        PATH = '/root/SRINI/webproject.yml'
-        CMD = 'ansible-playbook'
+        PATH2 = '/root/SRINI/webproject.yml'
+        CMD2 = 'ansible-playbook'
         }
 
   tools {
@@ -28,7 +28,7 @@ pipeline {
           steps {
                   sh 'echo "Continuos deploying .."'
                   sh '''
-                  sudo su - root -c "$CMD $PATH"
+                  sudo su - root -c "$CMD2 $PATH2"
                   '''
                   }
 
