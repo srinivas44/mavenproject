@@ -22,7 +22,13 @@ pipeline {
                 }
 
            }
+  stage('Deploy') {
+          steps {
+                  sh 'echo "Continuos deploying .."'
+                  sh 'sudo su - root -c "ansible-playbook /root/SRINI/webproject.yml"'
+                  }
 
+           }
         }
    }
  
